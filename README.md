@@ -94,6 +94,14 @@ git push -u origin master
 - `docker-compose -f ./docker-compose.build.yml build` - Builds a production docker image for the app. **Run the npm build script first**
 - `docker-compose -f ./docker-compose.build.yml up` - Spins up the production docker container. Builds it first if it has not been built yet.
 
+#### Client-Only
+
+The server & client components of this starter are loosely coupled, and you may decide to develop a static frontend using only the client component.
+
+For **client only** development using this starter:
+
+- Modify `views/page.ejs` to use static `<src>` links rather than templated values.
+
 ### Config
 
 All applications require a config mechanism, for example, `SLACK_API_TOKEN`. Things that you don't want in your git history, you want a different environment to have different value (dev/staging/production). This repo uses the file `config.ts` to access and setup all pre-nest init app variables. And a `.env` file to override variable in dev environment. This file is ignored from git.
